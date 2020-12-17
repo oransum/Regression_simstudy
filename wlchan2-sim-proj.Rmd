@@ -1,6 +1,6 @@
 ---
-title: 'Week 6 - Simulation Project'
-author: "STAT 420, Summer 2020, Oran Chan(wlchan2)"
+title: 'Linear Regression Simulation Project'
+author: "August 2020, Oran Chan"
 date: ''
 output:
   html_document: 
