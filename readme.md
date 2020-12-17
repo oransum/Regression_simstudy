@@ -1,6 +1,7 @@
 Linear Regression Simulation Project
 ================
-Nov-27-2020, Oran Chan
+Oran Chan
+Nov-27-2020
 
 -----
 
