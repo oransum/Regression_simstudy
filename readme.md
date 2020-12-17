@@ -1,79 +1,119 @@
+Linear Regression Simulation Project
+================
+Nov-27-2020, Oran Chan
 
-***
-
-
+-----
 
 # Simulation Study 1: Significance of Regression
 
 ### Introduction
 
-In this simulation study we will investigate the significance of regression test. We will simulate from two different models:
+In this simulation study we will investigate the significance of
+regression test. We will simulate from two different models:
 
-1. The **"significant"** model
+1.  The **“significant”** model
 
-\[
-Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3} + \epsilon_i
-\]
+  
+![&#10;Y\_i = \\beta\_0 + \\beta\_1 x\_{i1} + \\beta\_2 x\_{i2} +
+\\beta\_3 x\_{i3} +
+\\epsilon\_i&#10;](https://latex.codecogs.com/png.latex?%0AY_i%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20x_%7Bi1%7D%20%2B%20%5Cbeta_2%20x_%7Bi2%7D%20%2B%20%5Cbeta_3%20x_%7Bi3%7D%20%2B%20%5Cepsilon_i%0A
+"
+Y_i = \\beta_0 + \\beta_1 x_{i1} + \\beta_2 x_{i2} + \\beta_3 x_{i3} + \\epsilon_i
+")  
 
-where $\epsilon_i \sim N(0, \sigma^2)$ and
+where ![\\epsilon\_i \\sim N(0,
+\\sigma^2)](https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20N%280%2C%20%5Csigma%5E2%29
+"\\epsilon_i \\sim N(0, \\sigma^2)") and
 
-- $\beta_0 = 3$,
-- $\beta_1 = 1$,
-- $\beta_2 = 1$,
-- $\beta_3 = 1$.
+  - ![\\beta\_0
+    = 3](https://latex.codecogs.com/png.latex?%5Cbeta_0%20%3D%203
+    "\\beta_0 = 3"),
+  - ![\\beta\_1
+    = 1](https://latex.codecogs.com/png.latex?%5Cbeta_1%20%3D%201
+    "\\beta_1 = 1"),
+  - ![\\beta\_2
+    = 1](https://latex.codecogs.com/png.latex?%5Cbeta_2%20%3D%201
+    "\\beta_2 = 1"),
+  - ![\\beta\_3
+    = 1](https://latex.codecogs.com/png.latex?%5Cbeta_3%20%3D%201
+    "\\beta_3 = 1").
 
+<!-- end list -->
 
-2. The **"non-significant"** model
+2.  The **“non-significant”** model
 
-\[
-Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3} + \epsilon_i
-\]
+  
+![&#10;Y\_i = \\beta\_0 + \\beta\_1 x\_{i1} + \\beta\_2 x\_{i2} +
+\\beta\_3 x\_{i3} +
+\\epsilon\_i&#10;](https://latex.codecogs.com/png.latex?%0AY_i%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20x_%7Bi1%7D%20%2B%20%5Cbeta_2%20x_%7Bi2%7D%20%2B%20%5Cbeta_3%20x_%7Bi3%7D%20%2B%20%5Cepsilon_i%0A
+"
+Y_i = \\beta_0 + \\beta_1 x_{i1} + \\beta_2 x_{i2} + \\beta_3 x_{i3} + \\epsilon_i
+")  
 
-where $\epsilon_i \sim N(0, \sigma^2)$ and
+where ![\\epsilon\_i \\sim N(0,
+\\sigma^2)](https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20N%280%2C%20%5Csigma%5E2%29
+"\\epsilon_i \\sim N(0, \\sigma^2)") and
 
-- $\beta_0 = 3$,
-- $\beta_1 = 0$,
-- $\beta_2 = 0$,
-- $\beta_3 = 0$.
+  - ![\\beta\_0
+    = 3](https://latex.codecogs.com/png.latex?%5Cbeta_0%20%3D%203
+    "\\beta_0 = 3"),
+  - ![\\beta\_1
+    = 0](https://latex.codecogs.com/png.latex?%5Cbeta_1%20%3D%200
+    "\\beta_1 = 0"),
+  - ![\\beta\_2
+    = 0](https://latex.codecogs.com/png.latex?%5Cbeta_2%20%3D%200
+    "\\beta_2 = 0"),
+  - ![\\beta\_3
+    = 0](https://latex.codecogs.com/png.latex?%5Cbeta_3%20%3D%200
+    "\\beta_3 = 0").
 
-For both, we will consider a sample size of $25$ and three possible levels of noise. That is, three values of $\sigma$.
+For both, we will consider a sample size of
+![25](https://latex.codecogs.com/png.latex?25 "25") and three possible
+levels of noise. That is, three values of
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma").
 
-- $n = 25$
-- $\sigma \in (1, 5, 10)$
+  - ![n = 25](https://latex.codecogs.com/png.latex?n%20%3D%2025
+    "n = 25")
+  - ![\\sigma \\in
+    (1, 5, 10)](https://latex.codecogs.com/png.latex?%5Csigma%20%5Cin%20%281%2C%205%2C%2010%29
+    "\\sigma \\in (1, 5, 10)")
 
-Simulation will be used to obtain an empirical distribution for each of the following values, for each of the three values of $\sigma$, for both models.
+Simulation will be used to obtain an empirical distribution for each of
+the following values, for each of the three values of
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma"), for
+both models.
 
-- The **$F$ statistic** for the significance of regression test.
-- The **p-value** for the significance of regression test
-- **$R^2$**
+  - The **![F](https://latex.codecogs.com/png.latex?F "F") statistic**
+    for the significance of regression test.
+  - The **p-value** for the significance of regression test
+  - **![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2")**
 
 ### Methods
 
-```r
+``` r
 # Seed
 birthday = 19380301
 set.seed(birthday)
 ```
 
-Data found in [`study_1.csv`](study_1.csv) will be the values of the predictors. These will be kept constant for the entirety of this study. The `y` values in this data are a blank placeholder.
+Data found in [`study_1.csv`](study_1.csv) will be the values of the
+predictors. These will be kept constant for the entirety of this study.
+The `y` values in this data are a blank placeholder.
 
-
-```r
+``` r
 # Load data source
 library(readr)
 study1 = read.csv('study_1.csv')
 str(study1)
 ```
 
-```
-## 'data.frame':	25 obs. of  4 variables:
-##  $ y : int  0 0 0 0 0 0 0 0 0 0 ...
-##  $ x1: num  -1.54 -1.61 -4.56 -2.28 -2.76 -3.01 0.69 -3.31 -3.53 -4.12 ...
-##  $ x2: num  3 2.9 2.9 2.5 3 2.9 2.1 2.7 2.2 2.8 ...
-##  $ x3: num  2.96 2.71 2.62 2.41 2.77 ...
-```
+    ## 'data.frame':    25 obs. of  4 variables:
+    ##  $ y : int  0 0 0 0 0 0 0 0 0 0 ...
+    ##  $ x1: num  -1.54 -1.61 -4.56 -2.28 -2.76 -3.01 0.69 -3.31 -3.53 -4.12 ...
+    ##  $ x2: num  3 2.9 2.9 2.5 3 2.9 2.1 2.7 2.2 2.8 ...
+    ##  $ x3: num  2.96 2.71 2.62 2.41 2.77 ...
 
-```r
+``` r
 # GLobal variables
 n = 25
 p = 3
@@ -83,12 +123,18 @@ x = study1
 sim_cycle = 2000
 ```
 
-For each model and $\sigma$ combination, there will be $2000$ simulations. For each simulation, we will fit a regression model of the same form used to perform the simulation.
+For each model and
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+combination, there will be
+![2000](https://latex.codecogs.com/png.latex?2000 "2000") simulations.
+For each simulation, we will fit a regression model of the same form
+used to perform the simulation.
 
-The `y` vector $2 (models)×3 (sigmas)×2000 (sims)=12000$ will be simulated times.
+The `y` vector ![2 (models)×3 (sigmas)×2000
+(sims)=12000](https://latex.codecogs.com/png.latex?2%20%28models%29%C3%973%20%28sigmas%29%C3%972000%20%28sims%29%3D12000
+"2 (models)×3 (sigmas)×2000 (sims)=12000") will be simulated times.
 
-
-```r
+``` r
 initialize_var = function(cycle){
   ph = rep(0,cycle)
   
@@ -131,12 +177,18 @@ sim_mlr = function(x, sigma = 1, model = 'sig') {
 
 #### F-test is used to test the significance of the regression.
 
-- The null and alternative hypotheses
-  - $H_0: \beta_1 = \beta_2 = \beta_3 = 0$
-  - $H_1:$ At Least one of $\beta_j \neq 0,j=1,2,3$
-  
+  - The null and alternative hypotheses
+      - ![H\_0: \\beta\_1 = \\beta\_2 = \\beta\_3
+        = 0](https://latex.codecogs.com/png.latex?H_0%3A%20%5Cbeta_1%20%3D%20%5Cbeta_2%20%3D%20%5Cbeta_3%20%3D%200
+        "H_0: \\beta_1 = \\beta_2 = \\beta_3 = 0")
+      - ![H\_1:](https://latex.codecogs.com/png.latex?H_1%3A "H_1:") At
+        Least one of ![\\beta\_j
+        \\neq 0,j=1,2,3](https://latex.codecogs.com/png.latex?%5Cbeta_j%20%5Cneq%200%2Cj%3D1%2C2%2C3
+        "\\beta_j \\neq 0,j=1,2,3")
 
-```r
+<!-- end list -->
+
+``` r
 # Simulation
 simulate = function(x) {
   for (i in 1:3) { # 3 sigmas
@@ -170,10 +222,11 @@ simulate = function(x) {
 }
 ```
 
-- Simulation results will be plotted by below functions
+  - Simulation results will be plotted by below functions
 
+<!-- end list -->
 
-```r
+``` r
 # F-statistics Histogram
 fstat_hist = function(df1, df2, sig=FALSE, nsig=FALSE, curve=FALSE){
   
@@ -291,14 +344,13 @@ mean_nsig = function(){
 
 ### Results
 
-```r
+``` r
 #main
 initialize_var(sim_cycle) #set no. of simulation cycle 2000
 simulate(x) #simulate x
 ```
 
-
-```r
+``` r
 df1 = p - 1 #p-1
 df2 = n - p #n-p
 
@@ -308,16 +360,14 @@ fstat_hist(df1, df2, TRUE, TRUE)
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-7-1.png)<!-- -->
 
-
-```r
+``` r
 par(mfrow = c(2, 3))
 R2_hist(df1, df2, TRUE, TRUE)
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
 
-
-```r
+``` r
 par(mfrow = c(2, 3))
 pvalue_hist(df1, df2, TRUE, TRUE)
 ```
@@ -326,23 +376,50 @@ pvalue_hist(df1, df2, TRUE, TRUE)
 
 ### Discussion
 
-- $H_0: \beta_1 = \beta_2 = \beta_3 = 0$
-- $H_1:$ At Least one of $\beta_j \neq 0,j=1,2,3$
-  
+  - ![H\_0: \\beta\_1 = \\beta\_2 = \\beta\_3
+    = 0](https://latex.codecogs.com/png.latex?H_0%3A%20%5Cbeta_1%20%3D%20%5Cbeta_2%20%3D%20%5Cbeta_3%20%3D%200
+    "H_0: \\beta_1 = \\beta_2 = \\beta_3 = 0")
+  - ![H\_1:](https://latex.codecogs.com/png.latex?H_1%3A "H_1:") At
+    Least one of ![\\beta\_j
+    \\neq 0,j=1,2,3](https://latex.codecogs.com/png.latex?%5Cbeta_j%20%5Cneq%200%2Cj%3D1%2C2%2C3
+    "\\beta_j \\neq 0,j=1,2,3")
+
 #### F-Statistics
-- Since know the true distribution of F-statistics with two of the degress of freedom, it has been plotted with the empirical value in the F-statistics grid of plots in coming discussion.
-- F-statistics has a distribution under null hypothesis. It means that assuming null hypothesis is true, the test statistics follows an F-distribution.
+
+  - Since know the true distribution of F-statistics with two of the
+    degress of freedom, it has been plotted with the empirical value in
+    the F-statistics grid of plots in coming discussion.
+  - F-statistics has a distribution under null hypothesis. It means that
+    assuming null hypothesis is true, the test statistics follows an
+    F-distribution.
 
 #### Significant Model
-Since F-statistics has the above assumption, the empirical value of **"significant"** model does not follow the true distribution.
 
-##### $\sigma$=1
-  -  We can see in the plot on the left below, most of the F-value fall in the range from 20 to 50, which are considered as some very large F values. Such large F value corresponds to a very small p-value, that is to reject the null hypothesis.
-  - When we look at the plot of $R^2$ for $\sigma$=1, majority of value falls above 0.7. It means the althernative hypothesis model is explaining well by the predictors on the relationship with the response. It is also a indicator for the decision to reject $H_0$.
-  - The average F-statistics, $R^2$ and p-value are listed for each $\sigma$.
-  
+Since F-statistics has the above assumption, the empirical value of
+**“significant”** model does not follow the true distribution.
 
-```r
+##### ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")=1
+
+  - We can see in the plot on the left below, most of the F-value fall
+    in the range from 20 to 50, which are considered as some very large
+    F values. Such large F value corresponds to a very small p-value,
+    that is to reject the null hypothesis.
+  - When we look at the plot of
+    ![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2") for
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")=1, majority of value falls above 0.7. It means the
+    althernative hypothesis model is explaining well by the predictors
+    on the relationship with the response. It is also a indicator for
+    the decision to reject
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0").
+  - The average F-statistics,
+    ![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2") and p-value
+    are listed for each
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma").
+
+<!-- end list -->
+
+``` r
 par(mfrow = c(2, 3))
 fstat_hist(df1, df2, sig = TRUE, curve = TRUE)
 R2_hist(df1, df2, sig = TRUE)
@@ -350,46 +427,86 @@ R2_hist(df1, df2, sig = TRUE)
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-10-1.png)<!-- -->
 
-```r
+``` r
 # Significant Model
 mean_sig() # mean values of F-statistics, R2 and P-value
 ```
 
+| .            | Sigma.1 | Sigma.5 | Sigma.10 |
+| :----------- | ------: | ------: | -------: |
+| F-statistics | 41.4048 |  2.7377 |   1.4859 |
+| R2           |  0.8402 |  0.2535 |   0.1591 |
+| P-value      |  0.0000 |  0.2090 |   0.4054 |
 
+##### ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")=5 and ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")=10
 
-|.            | Sigma.1| Sigma.5| Sigma.10|
-|:------------|-------:|-------:|--------:|
-|F-statistics | 41.4048|  2.7377|   1.4859|
-|R2           |  0.8402|  0.2535|   0.1591|
-|P-value      |  0.0000|  0.2090|   0.4054|
-
-##### $\sigma$=5 and $\sigma$=10
-  - In the above plots of F-value for the other two $\sigma$(s), the empirical values lean to the left of the graph, which represents majority of the F-value are small. It also means the corresponding p-value becomes larger.
-  - In the plots of $R^2$, majority of values fall in the range of 0.1 to 0.3 for $\sigma$=5, 0.05 to 0.15 for $\sigma$=10. The model with these $\sigma$ do not performe well in explaining the relatinoship.
-  - With sufficiently larger p-value, the chance of FTR $H_0$ will be much higher than that with $\sigma$=1.
-  - They partially align with the characteristic of F-distribution. Nonetheless, even the empirical values becomes closer to the true value, it is still far from it. We will see how it goes with **"Non-significant "** model in the next section.
+  - In the above plots of F-value for the other two
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")(s), the empirical values lean to the left of the graph,
+    which represents majority of the F-value are small. It also means
+    the corresponding p-value becomes larger.
+  - In the plots of ![R^2](https://latex.codecogs.com/png.latex?R%5E2
+    "R^2"), majority of values fall in the range of 0.1 to 0.3 for
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")=5, 0.05 to 0.15 for
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")=10. The model with these
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    do not performe well in explaining the relatinoship.
+  - With sufficiently larger p-value, the chance of FTR
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0") will be much
+    higher than that with
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")=1.
+  - They partially align with the characteristic of F-distribution.
+    Nonetheless, even the empirical values becomes closer to the true
+    value, it is still far from it. We will see how it goes with
+    **“Non-significant”** model in the next section.
 
 ##### P-value distribution
-P-value distribution of 3 $\sigma$ varies. 
 
-  - In the first plots with $\sigma$ = 1, as discussed above, it comes with a critically small p-value so the decision is to reject the null hypothesis. The peak close to zero as shown in the plot is where the alternative hypothesis located.
+P-value distribution of 3
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+varies.
 
-```r
+  - In the first plots with
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    = 1, as discussed above, it comes with a critically small p-value so
+    the decision is to reject the null hypothesis. The peak close to
+    zero as shown in the plot is where the alternative hypothesis
+    located.
+
+<!-- end list -->
+
+``` r
 par(mfrow = c(1, 3))
 pvalue_hist(df1, df2, TRUE)
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
 
-  - In the second plot with $\sigma$ = 5. More p-value is falling into larger values, which contribute to null hypothesis. The frequency of the value close to zero is lower comparing to the 1st plot. 
-  - We should be reminded that null hypothesis contains low p-value as well.
-  - In the thrid plot with $\sigma$ = 10. Even p-value is falling into larger values, we can see a close to uniform distribution when $p-value > 0.2$. For p-value < 0.1, frequency from 0 to 40 might contain null hypothesis as well.
-  - The interpretation of p-value aligns with our previous explaination that the chance of FTR $H_0$ will be much higher.
- 
+  - In the second plot with
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    = 5. More p-value is falling into larger values, which contribute to
+    null hypothesis. The frequency of the value close to zero is lower
+    comparing to the 1st plot.
+  - We should be reminded that null hypothesis contains low p-value as
+    well.
+  - In the thrid plot with
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    = 10. Even p-value is falling into larger values, we can see a close
+    to uniform distribution when ![p-value
+    \> 0.2](https://latex.codecogs.com/png.latex?p-value%20%3E%200.2
+    "p-value \> 0.2"). For p-value \< 0.1, frequency from 0 to 40 might
+    contain null hypothesis as well.
+  - The interpretation of p-value aligns with our previous explaination
+    that the chance of FTR
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0") will be much
+    higher.
+
 #### Non-Significant Model
 
-
-```r
+``` r
 par(mfrow = c(2, 3))
 fstat_hist(df1, df2, nsig = TRUE, curve = TRUE)
 R2_hist(df1, df2, nsig = TRUE)
@@ -397,105 +514,195 @@ R2_hist(df1, df2, nsig = TRUE)
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-12-1.png)<!-- -->
 
-```r
+``` r
 # Non - Significant Model
 mean_nsig() # mean values of F-statistics, R2 and P-value
 ```
 
-
-
-|.            | Sigma.1| Sigma.5| Sigma.10|
-|:------------|-------:|-------:|--------:|
-|F-statistics |  1.0604|  1.1039|   1.1077|
-|R2           |  0.1205|  0.1248|   0.1249|
-|P-value      |  0.5159|  0.5011|   0.5019|
+| .            | Sigma.1 | Sigma.5 | Sigma.10 |
+| :----------- | ------: | ------: | -------: |
+| F-statistics |  1.0604 |  1.1039 |   1.1077 |
+| R2           |  0.1205 |  0.1248 |   0.1249 |
+| P-value      |  0.5159 |  0.5011 |   0.5019 |
 
 ##### Close to True F-distribution
-- As shown from the plots above, the F-value distribution of all $\sigma$ are critically close to the true F-distribution.
-- The average F values are rougly between 1.1 and 1.2, which is considered very small comparning to the significant model.
-- The average $R^2$ of all $\sigma$(s) are very small. It implies the **"non-significant"** model is not performing well in explaining the relationship between the predictors and reponse.
-- The average P-value of all $\sigma$(s) are considered very large as they are close to 0.5.It alignes with the small F-values. Therefore, the decision is very likely to be FTR the null hypothesis.
-- Hence, the very similar behaviour between the true F-distrbution and the **"non-significant"** model could be explained by the above findings.
-- We can also interpret the result by looking at setting of $\beta_{\texttt{1-3}}$. As they are all zero, so we expect the $H_0$ is very likely to be true.
+
+  - As shown from the plots above, the F-value distribution of all
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    are critically close to the true F-distribution.
+  - The average F values are rougly between 1.1 and 1.2, which is
+    considered very small comparning to the significant model.
+  - The average ![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2")
+    of all ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")(s) are very small. It implies the **“non-significant”**
+    model is not performing well in explaining the relationship between
+    the predictors and reponse.
+  - The average P-value of all
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")(s) are considered very large as they are close to 0.5.It
+    alignes with the small F-values. Therefore, the decision is very
+    likely to be FTR the null hypothesis.
+  - Hence, the very similar behaviour between the true F-distrbution and
+    the **“non-significant”** model could be explained by the above
+    findings.
+  - We can also interpret the result by looking at setting of
+    ![\\beta\_{\\texttt{1-3}}](https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Ctexttt%7B1-3%7D%7D
+    "\\beta_{\\texttt{1-3}}"). As they are all zero, so we expect the
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0") is very
+    likely to be true.
 
 ##### P-value distribution
 
-P-value distribution of 3 $\sigma$ are very similar.
+P-value distribution of 3
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma") are
+very similar.
 
-- The P-value follow a uniform distribution in all three plots.
+  - The P-value follow a uniform distribution in all three plots.
 
+<!-- end list -->
 
-```r
+``` r
 par(mfrow = c(1, 3))
 pvalue_hist(df1, df2, nsig = TRUE)
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
 
-- It means that 5% of the p-value will be above the 9th percentile, another 5% will be between 90th and 95th percentile, and so forth. 5% of the value will be from 0 to 0.05, and another will be from 0.05 to 0.1.
-- The uniformly distributed p-value is one of the definition of a p-value under null hypothesis.
-- The above observation aligns with our discussed devision to be FTR $H_0$.
+  - It means that 5% of the p-value will be above the 9th percentile,
+    another 5% will be between 90th and 95th percentile, and so forth.
+    5% of the value will be from 0 to 0.05, and another will be from
+    0.05 to 0.1.
+  - The uniformly distributed p-value is one of the definition of a
+    p-value under null hypothesis.
+  - The above observation aligns with our discussed devision to be FTR
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0").
 
-#### **$\sigma$** vs F-statistic, p-value, R2
+#### **![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")** vs F-statistic, p-value, R2
 
-We will look into the relatinoship between $\sigma$, and $F$ statistic, the p-value, $R^2$.
+We will look into the relatinoship between
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma"), and
+![F](https://latex.codecogs.com/png.latex?F "F") statistic, the p-value,
+![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2").
 
-- When we perform a significant test on regression, the relationship varies differently according to the settings of the model. Specifically, the relationship is affected by the value of $\beta$.
+  - When we perform a significant test on regression, the relationship
+    varies differently according to the settings of the model.
+    Specifically, the relationship is affected by the value of
+    ![\\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\\beta").
 
-In **"Significant"** model, we have positive signal strength for $\beta_{\texttt{1-3}}$. 
+In **“Significant”** model, we have positive signal strength for
+![\\beta\_{\\texttt{1-3}}](https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Ctexttt%7B1-3%7D%7D
+"\\beta_{\\texttt{1-3}}").
 
-- When $\sigma$ becomes larger, the F-statistic distribution becomes closer to the true F-distribution. The value of $R^2$ drops significantly and p-value increases significantly.
-- We can interpret that, when $\sigma$ becomes larger in **"Signigficant"** model, it is more likely to be FTR $H_0$.
+  - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma") becomes larger, the F-statistic distribution becomes
+    closer to the true F-distribution. The value of
+    ![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2") drops
+    significantly and p-value increases significantly.
+  - We can interpret that, when
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    becomes larger in **“Signigficant”** model, it is more likely to be
+    FTR ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0").
 
-In **"Non-Significant"** model, we have zero signal strength for $\beta_{\texttt{1-3}}$ and $\beta_0$ = 3.
+In **“Non-Significant”** model, we have zero signal strength for
+![\\beta\_{\\texttt{1-3}}](https://latex.codecogs.com/png.latex?%5Cbeta_%7B%5Ctexttt%7B1-3%7D%7D
+"\\beta_{\\texttt{1-3}}") and
+![\\beta\_0](https://latex.codecogs.com/png.latex?%5Cbeta_0 "\\beta_0")
+= 3.
 
-- When $\sigma$ varies, the effect on $F$ statistic, the p-value and $R^2$ are considerably small.
-- Hence, given $\beta_0$ = 3, under the settings of **"Non-Significant"**, we can interpret that, $\sigma$ has very slight influcence on $F$ statistic, the p-value and $R^2$. The decision of FTR $H_0$ would remain unchanged.
- 
+  - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma") varies, the effect on
+    ![F](https://latex.codecogs.com/png.latex?F "F") statistic, the
+    p-value and ![R^2](https://latex.codecogs.com/png.latex?R%5E2 "R^2")
+    are considerably small.
+  - Hence, given
+    ![\\beta\_0](https://latex.codecogs.com/png.latex?%5Cbeta_0
+    "\\beta_0") = 3, under the settings of **“Non-Significant”**, we can
+    interpret that,
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    has very slight influcence on
+    ![F](https://latex.codecogs.com/png.latex?F "F") statistic, the
+    p-value and ![R^2](https://latex.codecogs.com/png.latex?R%5E2
+    "R^2"). The decision of FTR
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0") would remain
+    unchanged.
+
 # Simulation Study 2: Using RMSE for Selection?
+
 ### Introduction
 
-In this simulation study we will investigate how well this procedure works. Since splitting the data is random, we don’t expect it to work correctly each time. We could get unlucky. But averaged over many attempts, we should expect it to select the appropriate model.
+In this simulation study we will investigate how well this procedure
+works. Since splitting the data is random, we don’t expect it to work
+correctly each time. We could get unlucky. But averaged over many
+attempts, we should expect it to select the appropriate model.
 
 We will simulate from the model
 
-\[
-Y_i = \beta_0 + \beta_1 x_{i1} + \beta_2 x_{i2} + \beta_3 x_{i3} + \beta_4 x_{i4} + \beta_5 x_{i5} + \beta_6 x_{i6} + \epsilon_i
-\]
+  
+![&#10;Y\_i = \\beta\_0 + \\beta\_1 x\_{i1} + \\beta\_2 x\_{i2} +
+\\beta\_3 x\_{i3} + \\beta\_4 x\_{i4} + \\beta\_5 x\_{i5} + \\beta\_6
+x\_{i6} +
+\\epsilon\_i&#10;](https://latex.codecogs.com/png.latex?%0AY_i%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20x_%7Bi1%7D%20%2B%20%5Cbeta_2%20x_%7Bi2%7D%20%2B%20%5Cbeta_3%20x_%7Bi3%7D%20%2B%20%5Cbeta_4%20x_%7Bi4%7D%20%2B%20%5Cbeta_5%20x_%7Bi5%7D%20%2B%20%5Cbeta_6%20x_%7Bi6%7D%20%2B%20%5Cepsilon_i%0A
+"
+Y_i = \\beta_0 + \\beta_1 x_{i1} + \\beta_2 x_{i2} + \\beta_3 x_{i3} + \\beta_4 x_{i4} + \\beta_5 x_{i5} + \\beta_6 x_{i6} + \\epsilon_i
+")  
 
-where $\epsilon_i \sim N(0, \sigma^2)$ and
+where ![\\epsilon\_i \\sim N(0,
+\\sigma^2)](https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20N%280%2C%20%5Csigma%5E2%29
+"\\epsilon_i \\sim N(0, \\sigma^2)") and
 
-- $\beta_0 = 0$,
-- $\beta_1 = 3$,
-- $\beta_2 = -4$,
-- $\beta_3 = 1.6$,
-- $\beta_4 = -1.1$,
-- $\beta_5 = 0.7$,
-- $\beta_6 = 0.5$.
+  - ![\\beta\_0
+    = 0](https://latex.codecogs.com/png.latex?%5Cbeta_0%20%3D%200
+    "\\beta_0 = 0"),
+  - ![\\beta\_1
+    = 3](https://latex.codecogs.com/png.latex?%5Cbeta_1%20%3D%203
+    "\\beta_1 = 3"),
+  - ![\\beta\_2 =
+    -4](https://latex.codecogs.com/png.latex?%5Cbeta_2%20%3D%20-4
+    "\\beta_2 = -4"),
+  - ![\\beta\_3
+    = 1.6](https://latex.codecogs.com/png.latex?%5Cbeta_3%20%3D%201.6
+    "\\beta_3 = 1.6"),
+  - ![\\beta\_4 =
+    -1.1](https://latex.codecogs.com/png.latex?%5Cbeta_4%20%3D%20-1.1
+    "\\beta_4 = -1.1"),
+  - ![\\beta\_5
+    = 0.7](https://latex.codecogs.com/png.latex?%5Cbeta_5%20%3D%200.7
+    "\\beta_5 = 0.7"),
+  - ![\\beta\_6
+    = 0.5](https://latex.codecogs.com/png.latex?%5Cbeta_6%20%3D%200.5
+    "\\beta_6 = 0.5").
 
 ### Methods
 
-```r
+``` r
 # Seed
 set.seed(birthday)
 ```
 
-Data in [`study_2.csv`](study_2.csv) will be the values of the predictors. These will be kept constant for the entirety of this study. The `y` values in this data are a blank placeholder.
+Data in [`study_2.csv`](study_2.csv) will be the values of the
+predictors. These will be kept constant for the entirety of this study.
+The `y` values in this data are a blank placeholder.
 
-
-```r
+``` r
 # Load Data source
 library(readr)
 study2 = read.csv('study_2.csv')
 ```
 
-We will consider a sample size of $500$ and three possible levels of noise. That is, three values of $\sigma$.
+We will consider a sample size of
+![500](https://latex.codecogs.com/png.latex?500 "500") and three
+possible levels of noise. That is, three values of
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma").
 
-- $n = 500$
-- $\sigma \in (1, 2, 4)$
+  - ![n = 500](https://latex.codecogs.com/png.latex?n%20%3D%20500
+    "n = 500")
+  - ![\\sigma \\in
+    (1, 2, 4)](https://latex.codecogs.com/png.latex?%5Csigma%20%5Cin%20%281%2C%202%2C%204%29
+    "\\sigma \\in (1, 2, 4)")
 
+<!-- end list -->
 
-```r
+``` r
 # GLobal variables
 n = 500
 sigma = c(1, 2, 4)
@@ -511,8 +718,7 @@ Model_select_trn = matrix(0, sim_cycle, 3)
 Model_select_tst = matrix(0, sim_cycle, 3)
 ```
 
-
-```r
+``` r
 initialize_var = function(cycle){
   sim_cycle <<- cycle
   RMSE_train <<- data.frame(sig1 = rep(0, 9), sig2 = rep(0, 9), sig3 = rep(0, 9))
@@ -553,30 +759,40 @@ get_RMSE = function(actual, predicted) {
 }
 ```
 
-Each time the data is simulated, they will be randomly split into train and test sets of equal sizes (250 observations for training, 250 observations for testing).
+Each time the data is simulated, they will be randomly split into train
+and test sets of equal sizes (250 observations for training, 250
+observations for testing).
 
 For each, we will fit **nine** models, with forms:
 
-- `y ~ x1`
-- `y ~ x1 + x2`
-- `y ~ x1 + x2 + x3`
-- `y ~ x1 + x2 + x3 + x4`
-- `y ~ x1 + x2 + x3 + x4 + x5`
-- `y ~ x1 + x2 + x3 + x4 + x5 + x6`, the correct form of the model as noted above
-- `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7`
-- `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8`
-- `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9`
+  - `y ~ x1`
+  - `y ~ x1 + x2`
+  - `y ~ x1 + x2 + x3`
+  - `y ~ x1 + x2 + x3 + x4`
+  - `y ~ x1 + x2 + x3 + x4 + x5`
+  - `y ~ x1 + x2 + x3 + x4 + x5 + x6`, the correct form of the model as
+    noted above
+  - `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7`
+  - `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8`
+  - `y ~ x1 + x2 + x3 + x4 + x5 + x6 + x7 + x8 + x9`
 
 For each model, we will calculate Train and Test RMSE.
 
-\[
-\text{RMSE}(\text{model, data}) = \sqrt{\frac{1}{n} \sum_{i = 1}^{n}(y_i - \hat{y}_i)^2}
-\]
+  
+![&#10;\\text{RMSE}(\\text{model, data}) = \\sqrt{\\frac{1}{n} \\sum\_{i
+= 1}^{n}(y\_i -
+\\hat{y}\_i)^2}&#10;](https://latex.codecogs.com/png.latex?%0A%5Ctext%7BRMSE%7D%28%5Ctext%7Bmodel%2C%20data%7D%29%20%3D%20%5Csqrt%7B%5Cfrac%7B1%7D%7Bn%7D%20%5Csum_%7Bi%20%3D%201%7D%5E%7Bn%7D%28y_i%20-%20%5Chat%7By%7D_i%29%5E2%7D%0A
+"
+\\text{RMSE}(\\text{model, data}) = \\sqrt{\\frac{1}{n} \\sum_{i = 1}^{n}(y_i - \\hat{y}_i)^2}
+")  
 
-- In each simluation, one out of nine models will be selected for each sigma.
-- The one with lowest RMSE value in test set will be selected.
+  - In each simluation, one out of nine models will be selected for each
+    sigma.
+  - The one with lowest RMSE value in test set will be selected.
 
-```r
+<!-- end list -->
+
+``` r
 # Simulation
 simulate = function(x){
   
@@ -642,14 +858,29 @@ simulate = function(x){
 }
 ```
 
-This above process will be repeated with $1000$ simulations for each of the $3$ values of $\sigma$. For each value of $\sigma$, there will be a plot that shows how average Train RMSE and average Test RMSE changes as a function of model size. We can also tell number of times the model of each size was chosen for each value of $\sigma$.
+This above process will be repeated with
+![1000](https://latex.codecogs.com/png.latex?1000 "1000") simulations
+for each of the ![3](https://latex.codecogs.com/png.latex?3 "3") values
+of ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma").
+For each value of
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma"),
+there will be a plot that shows how average Train RMSE and average Test
+RMSE changes as a function of model size. We can also tell number of
+times the model of each size was chosen for each value of
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma").
 
-We will simulate the $y$ vector $3×1000=3000$ times and fit $9×3×1000=27000$ models.
+We will simulate the ![y](https://latex.codecogs.com/png.latex?y "y")
+vector
+![3×1000=3000](https://latex.codecogs.com/png.latex?3%C3%971000%3D3000
+"3×1000=3000") times and fit
+![9×3×1000=27000](https://latex.codecogs.com/png.latex?9%C3%973%C3%971000%3D27000
+"9×3×1000=27000") models.
 
-- Simulation results will be plotted by below functions
+  - Simulation results will be plotted by below functions
 
+<!-- end list -->
 
-```r
+``` r
 # Plot average RMSE as a function of Model size
 plot_RMSE = function(show_diverge = FALSE, select_model = -1){
   
@@ -730,7 +961,7 @@ print_model_selected = function(portion=FALSE, correct_model = 6){
 
 ### Results
 
-```r
+``` r
 #main
 initialize_var(sim_cycle) #set no. of simulation cycle 1000
 simulate(s2)
@@ -741,46 +972,54 @@ plot_RMSE()
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-20-1.png)<!-- -->
 
-
-```r
+``` r
 # Print RMSE value for each sigma, train and test set
 print_by_sigma()
 ```
 
-
-
-| Model size| Sigma.1.Train| Sigma.1.Test| Sigma.2.Train| Sigma.2.Test| Sigma.4.Train| Sigma.4.Test|
-|----------:|-------------:|------------:|-------------:|------------:|-------------:|------------:|
-|          1|        2.5665|        2.578|         3.084|        3.107|         4.643|        4.667|
-|          2|        1.5885|        1.608|         2.335|        2.364|         4.177|        4.208|
-|          3|        1.1642|        1.180|         2.069|        2.102|         4.025|        4.074|
-|          4|        1.1276|        1.147|         2.046|        2.088|         4.006|        4.073|
-|          5|        1.1115|        1.137|         2.035|        2.085|         3.994|        4.076|
-|          6|        0.9861|        1.014|         1.970|        2.025|         3.954|        4.055|
-|          7|        0.9841|        1.016|         1.966|        2.030|         3.946|        4.063|
-|          8|        0.9822|        1.018|         1.962|        2.034|         3.938|        4.071|
-|          9|        0.9803|        1.020|         1.958|        2.038|         3.930|        4.079|
+| Model size | Sigma.1.Train | Sigma.1.Test | Sigma.2.Train | Sigma.2.Test | Sigma.4.Train | Sigma.4.Test |
+| ---------: | ------------: | -----------: | ------------: | -----------: | ------------: | -----------: |
+|          1 |        2.5665 |        2.578 |         3.084 |        3.107 |         4.643 |        4.667 |
+|          2 |        1.5885 |        1.608 |         2.335 |        2.364 |         4.177 |        4.208 |
+|          3 |        1.1642 |        1.180 |         2.069 |        2.102 |         4.025 |        4.074 |
+|          4 |        1.1276 |        1.147 |         2.046 |        2.088 |         4.006 |        4.073 |
+|          5 |        1.1115 |        1.137 |         2.035 |        2.085 |         3.994 |        4.076 |
+|          6 |        0.9861 |        1.014 |         1.970 |        2.025 |         3.954 |        4.055 |
+|          7 |        0.9841 |        1.016 |         1.966 |        2.030 |         3.946 |        4.063 |
+|          8 |        0.9822 |        1.018 |         1.962 |        2.034 |         3.938 |        4.071 |
+|          9 |        0.9803 |        1.020 |         1.958 |        2.038 |         3.930 |        4.079 |
 
 ### Discussion
 
-We will discuss whether the RMSE method **always** select the correct model.
+We will discuss whether the RMSE method **always** select the correct
+model.
 
-- RMSE can be interpreted as the smaller the better.
-- From the above 3 plots, we can see a considerably high RMSE value when model size is 1 and 2. It is a case of underfitting for both train and test set.
+  - RMSE can be interpreted as the smaller the better.
+  - From the above 3 plots, we can see a considerably high RMSE value
+    when model size is 1 and 2. It is a case of underfitting for both
+    train and test set.
 
 ##### Train set RMSE performance
 
-- RMSE value starts to diminish slowely after sitting at the model with size 3.
-- Meanwhile, the test and train set RMSE start to diverge.
-- Train set RMSE remains in a state of good performance and it is further improved at model with size 6. We don't see any issue of underfitting as train set RMSE converges to the minimum at model with size 9.
+  - RMSE value starts to diminish slowely after sitting at the model
+    with size 3.
+  - Meanwhile, the test and train set RMSE start to diverge.
+  - Train set RMSE remains in a state of good performance and it is
+    further improved at model with size 6. We don’t see any issue of
+    underfitting as train set RMSE converges to the minimum at model
+    with size 9.
 
 ##### Test set RMSE performance
 
-- RMSE value starts to diminish slowely after model with size 3, and even slower than Train set RMSE.
-- Test RMSE set converges to minimum point at model with size 6. 
-- However, it starts to rebound from model size 7 to 9. It is a case of overfitting.
+  - RMSE value starts to diminish slowely after model with size 3, and
+    even slower than Train set RMSE.
+  - Test RMSE set converges to minimum point at model with size 6.
+  - However, it starts to rebound from model size 7 to 9. It is a case
+    of overfitting.
 
-```r
+<!-- end list -->
+
+``` r
 # Zoom in the plots to show the effect of divergence
 plot_RMSE(show_diverge = TRUE, select_model = 6)
 ```
@@ -789,153 +1028,222 @@ plot_RMSE(show_diverge = TRUE, select_model = 6)
 
 ##### The correct model
 
-- Hence, we conclude that model with size 6 is the correct model for explaining the dataset. Although train set RMSE is the lowest for model 9, test set RMSE is higher, which indicates the model does not work well with new data and suffers from overfitting.
-- In the above plots, the red line indicates the correct model size.
+  - Hence, we conclude that model with size 6 is the correct model for
+    explaining the dataset. Although train set RMSE is the lowest for
+    model 9, test set RMSE is higher, which indicates the model does not
+    work well with new data and suffers from overfitting.
+  - In the above plots, the red line indicates the correct model size.
 
+<!-- end list -->
 
-```r
+``` r
 # No. of times a model is selected
 print_model_selected()
 ```
 
-
-
-|          |  1|  2|   3|   4|  5|   6|   7|   8|   9|
-|:---------|--:|--:|---:|---:|--:|---:|---:|---:|---:|
-|Sigma = 1 |  0|  0|   0|   0|  1| 528| 203| 122| 146|
-|Sigma = 2 |  0|  0|  30|  12| 14| 524| 196| 110| 114|
-|Sigma = 4 |  0| 23| 171| 107| 65| 316| 130|  85| 103|
+|           | 1 |  2 |   3 |   4 |  5 |   6 |   7 |   8 |   9 |
+| :-------- | -: | -: | --: | --: | -: | --: | --: | --: | --: |
+| Sigma = 1 | 0 |  0 |   0 |   0 |  1 | 528 | 203 | 122 | 146 |
+| Sigma = 2 | 0 |  0 |  30 |  12 | 14 | 524 | 196 | 110 | 114 |
+| Sigma = 4 | 0 | 23 | 171 | 107 | 65 | 316 | 130 |  85 | 103 |
 
 ##### Always being selected ?
 
-- The model with size 6, is the most selected model for all 3 $\sigma$(s).
-- But the portion of the selection is not ideal. The highest percentage rougly **54%** of $\sigma$ = 1. The lowest is only **34%** of $\sigma$ = 4.
+  - The model with size 6, is the most selected model for all 3
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma")(s).
+  - But the portion of the selection is not ideal. The highest
+    percentage rougly **54%** of
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    = 1. The lowest is only **34%** of
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    = 4.
 
+<!-- end list -->
 
-```r
+``` r
 # Portion of the correct model selected
 print_model_selected(portion = TRUE, correct_model = 6)
 ```
 
-
-
-|          | Portion of the correct Model Selected|
-|:---------|-------------------------------------:|
-|Sigma = 1 |                                 0.528|
-|Sigma = 2 |                                 0.524|
-|Sigma = 4 |                                 0.316|
+|           | Portion of the correct Model Selected |
+| :-------- | ------------------------------------: |
+| Sigma = 1 |                                 0.528 |
+| Sigma = 2 |                                 0.524 |
+| Sigma = 4 |                                 0.316 |
 
 #### Does RMSE method always select the correct model ?
-- The RMSE method **does not** always select the correct model. It is not a reliable method for model selection in current study.
+
+  - The RMSE method **does not** always select the correct model. It is
+    not a reliable method for model selection in current study.
 
 ##### Level of noise impact ?
 
-We will discuss whether the level of noice would affect our selection result.
+We will discuss whether the level of noice would affect our selection
+result.
 
-
-```r
+``` r
 # Re-plot for easy reference
 plot_RMSE()
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-25-1.png)<!-- -->
 
-- RMSE
-  - When $\sigma$ becomes larger, the average RMSE value becomes larger, but the variability of RMSE value becomes lower. There is a positive relationship between $\sigma$ and average RMSE value.
-  - When $\sigma$ becomes larger, the performace of test set will start to decrease earlier. Test and train set will diverge more than that of smaller $\sigma$.
+  - RMSE
+      - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+        "\\sigma") becomes larger, the average RMSE value becomes
+        larger, but the variability of RMSE value becomes lower. There
+        is a positive relationship between
+        ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+        "\\sigma") and average RMSE value.
+      - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+        "\\sigma") becomes larger, the performace of test set will start
+        to decrease earlier. Test and train set will diverge more than
+        that of smaller
+        ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+        "\\sigma").
 
+<!-- end list -->
 
-```r
+``` r
 # Re-plot for easy reference
 print_model_selected()
 ```
 
+|           | 1 |  2 |   3 |   4 |  5 |   6 |   7 |   8 |   9 |
+| :-------- | -: | -: | --: | --: | -: | --: | --: | --: | --: |
+| Sigma = 1 | 0 |  0 |   0 |   0 |  1 | 528 | 203 | 122 | 146 |
+| Sigma = 2 | 0 |  0 |  30 |  12 | 14 | 524 | 196 | 110 | 114 |
+| Sigma = 4 | 0 | 23 | 171 | 107 | 65 | 316 | 130 |  85 | 103 |
 
-
-|          |  1|  2|   3|   4|  5|   6|   7|   8|   9|
-|:---------|--:|--:|---:|---:|--:|---:|---:|---:|---:|
-|Sigma = 1 |  0|  0|   0|   0|  1| 528| 203| 122| 146|
-|Sigma = 2 |  0|  0|  30|  12| 14| 524| 196| 110| 114|
-|Sigma = 4 |  0| 23| 171| 107| 65| 316| 130|  85| 103|
-
-```r
+``` r
 print_model_selected(portion = TRUE, correct_model = 6)
 ```
 
+|           | Portion of the correct Model Selected |
+| :-------- | ------------------------------------: |
+| Sigma = 1 |                                 0.528 |
+| Sigma = 2 |                                 0.524 |
+| Sigma = 4 |                                 0.316 |
 
+  - Model selection
+      - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+        "\\sigma") becomes larger, the selection becomes broader.
+          - ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+            "\\sigma") = 1, 4 out of 9 models were selected
+          - ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+            "\\sigma") = 2, 7 out of 9 models were selected
+          - ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+            "\\sigma") = 4, 8 out of 9 models were selected
 
-|          | Portion of the correct Model Selected|
-|:---------|-------------------------------------:|
-|Sigma = 1 |                                 0.528|
-|Sigma = 2 |                                 0.524|
-|Sigma = 4 |                                 0.316|
+We can interpret as, with higher variance, there is higher probability
+other models will perform better, but generally over 1000 simulations,
+they perform poorly.
 
-- Model selection
-  - When $\sigma$ becomes larger, the selection becomes broader.
-    - $\sigma$ = 1, 4 out of 9 models were selected
-    - $\sigma$ = 2, 7 out of 9 models were selected
-    - $\sigma$ = 4, 8 out of 9 models were selected
+  - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma") becomes larger, the lower chance the correct model is
+    selected.
 
-We can interpret as, with higher variance, there is higher probability other models will perform better, but generally over 1000 simulations, they perform poorly.
-
-  - When $\sigma$ becomes larger, the lower chance the correct model is selected.
-
-We can interpret that some other models would perform better due to high variance. Therefore, we prefer a lower $\sigma$ value during model selection process.
+We can interpret that some other models would perform better due to high
+variance. Therefore, we prefer a lower
+![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+value during model selection process.
 
 # Simulation Study 3: Power
 
 ### Introduction
-In this simulation study we will investigate the **power** of the significance of regression test for simple linear regression. 
 
-\[
-H_0: \beta_{1} = 0 \ \text{vs} \ H_1: \beta_{1} \neq 0
-\]
+In this simulation study we will investigate the **power** of the
+significance of regression test for simple linear regression.
 
-Recall, we had defined the *significance* level, $\alpha$, to be the probability of a Type I error.
+  
+![&#10;H\_0: \\beta\_{1} = 0 \\ \\text{vs} \\ H\_1: \\beta\_{1}
+\\neq 0&#10;](https://latex.codecogs.com/png.latex?%0AH_0%3A%20%5Cbeta_%7B1%7D%20%3D%200%20%5C%20%5Ctext%7Bvs%7D%20%5C%20H_1%3A%20%5Cbeta_%7B1%7D%20%5Cneq%200%0A
+"
+H_0: \\beta_{1} = 0 \\ \\text{vs} \\ H_1: \\beta_{1} \\neq 0
+")  
 
-\[
-\alpha = P[\text{Reject } H_0 \mid H_0 \text{ True}] = P[\text{Type I Error}]
-\]
+Recall, we had defined the *significance* level,
+![\\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\\alpha"), to
+be the probability of a Type I error.
 
-Similarly, the probability of a Type II error is often denoted using $\beta$; however, this should not be confused with a regression parameter.
+  
+![&#10;\\alpha = P\[\\text{Reject } H\_0 \\mid H\_0 \\text{ True}\] =
+P\[\\text{Type I
+Error}\]&#10;](https://latex.codecogs.com/png.latex?%0A%5Calpha%20%3D%20P%5B%5Ctext%7BReject%20%7D%20H_0%20%5Cmid%20H_0%20%5Ctext%7B%20True%7D%5D%20%3D%20P%5B%5Ctext%7BType%20I%20Error%7D%5D%0A
+"
+\\alpha = P[\\text{Reject } H_0 \\mid H_0 \\text{ True}] = P[\\text{Type I Error}]
+")  
 
-\[
-\beta = P[\text{Fail to Reject } H_0 \mid H_1 \text{ True}] = P[\text{Type II Error}]
-\]
+Similarly, the probability of a Type II error is often denoted using
+![\\beta](https://latex.codecogs.com/png.latex?%5Cbeta "\\beta");
+however, this should not be confused with a regression parameter.
 
-*Power* is the probability of rejecting the null hypothesis when the null is not true, that is, the alternative is true and $\beta_{1}$ is non-zero.
+  
+![&#10;\\beta = P\[\\text{Fail to Reject } H\_0 \\mid H\_1 \\text{
+True}\] = P\[\\text{Type II
+Error}\]&#10;](https://latex.codecogs.com/png.latex?%0A%5Cbeta%20%3D%20P%5B%5Ctext%7BFail%20to%20Reject%20%7D%20H_0%20%5Cmid%20H_1%20%5Ctext%7B%20True%7D%5D%20%3D%20P%5B%5Ctext%7BType%20II%20Error%7D%5D%0A
+"
+\\beta = P[\\text{Fail to Reject } H_0 \\mid H_1 \\text{ True}] = P[\\text{Type II Error}]
+")  
 
-\[
-\text{Power} = 1 - \beta = P[\text{Reject } H_0 \mid H_1 \text{ True}]
-\]
+*Power* is the probability of rejecting the null hypothesis when the
+null is not true, that is, the alternative is true and
+![\\beta\_{1}](https://latex.codecogs.com/png.latex?%5Cbeta_%7B1%7D
+"\\beta_{1}") is non-zero.
 
-Essentially, power is the probability that a signal of a particular strength will be detected. Many things affect the power of a test. In this case, some of those are:
+  
+![&#10;\\text{Power} = 1 - \\beta = P\[\\text{Reject } H\_0 \\mid H\_1
+\\text{
+True}\]&#10;](https://latex.codecogs.com/png.latex?%0A%5Ctext%7BPower%7D%20%3D%201%20-%20%5Cbeta%20%3D%20P%5B%5Ctext%7BReject%20%7D%20H_0%20%5Cmid%20H_1%20%5Ctext%7B%20True%7D%5D%0A
+"
+\\text{Power} = 1 - \\beta = P[\\text{Reject } H_0 \\mid H_1 \\text{ True}]
+")  
 
-- Sample Size, $n$
-- Signal Strength, $\beta_1$
-- Noise Level, $\sigma$
-- Significance Level, $\alpha$
+Essentially, power is the probability that a signal of a particular
+strength will be detected. Many things affect the power of a test. In
+this case, some of those are:
 
-We'll investigate the first three.
+  - Sample Size, ![n](https://latex.codecogs.com/png.latex?n "n")
+  - Signal Strength,
+    ![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1
+    "\\beta_1")
+  - Noise Level,
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+  - Significance Level,
+    ![\\alpha](https://latex.codecogs.com/png.latex?%5Calpha "\\alpha")
+
+We’ll investigate the first three.
 
 ### Methods
 
-For simplicity, we will let $\beta_0 = 0$, thus $\beta_1$ is essentially controlling the amount of "signal." We will then consider different signals, noises, and sample sizes:
+For simplicity, we will let ![\\beta\_0
+= 0](https://latex.codecogs.com/png.latex?%5Cbeta_0%20%3D%200
+"\\beta_0 = 0"), thus
+![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1 "\\beta_1")
+is essentially controlling the amount of “signal.” We will then consider
+different signals, noises, and sample sizes:
 
-- $\beta_1 \in (-2, -1.9, -1.8, \ldots, -0.1, 0, 0.1, 0.2, 0.3, \ldots 1.9, 2)$
-- $\sigma \in (1, 2, 4)$
-- $n \in (10, 20, 30)$
+  - ![\\beta\_1 \\in (-2, -1.9, -1.8, \\ldots, -0.1, 0, 0.1, 0.2, 0.3,
+    \\ldots 1.9, 2)](https://latex.codecogs.com/png.latex?%5Cbeta_1%20%5Cin%20%28-2%2C%20-1.9%2C%20-1.8%2C%20%5Cldots%2C%20-0.1%2C%200%2C%200.1%2C%200.2%2C%200.3%2C%20%5Cldots%201.9%2C%202%29
+    "\\beta_1 \\in (-2, -1.9, -1.8, \\ldots, -0.1, 0, 0.1, 0.2, 0.3, \\ldots 1.9, 2)")
+  - ![\\sigma \\in
+    (1, 2, 4)](https://latex.codecogs.com/png.latex?%5Csigma%20%5Cin%20%281%2C%202%2C%204%29
+    "\\sigma \\in (1, 2, 4)")
+  - ![n \\in
+    (10, 20, 30)](https://latex.codecogs.com/png.latex?n%20%5Cin%20%2810%2C%2020%2C%2030%29
+    "n \\in (10, 20, 30)")
 
-We will hold the significance level constant at $\alpha = 0.05$.
+We will hold the significance level constant at ![\\alpha
+= 0.05](https://latex.codecogs.com/png.latex?%5Calpha%20%3D%200.05
+"\\alpha = 0.05").
 
-
-```r
+``` r
 # Seed
 set.seed(birthday)
 ```
 
-
-```r
+``` r
 # Global Parameter
 beta_1 = seq(-2, 2, 0.1)
 sigma = c(1, 2, 4)
@@ -947,22 +1255,25 @@ alpha = 0.05
 sim_cycle = 1000
 ```
 
-
-```r
+``` r
 power = matrix(0, length(beta_1), length(sigma)) # power for each sigma
 power_n = data.frame(n10 = power, n20 = power, n30 = power) # power for all n
 ```
 
 We will simulate from the model
 
-\[
-Y_i = \beta_0 + \beta_1 x_i + \epsilon_i
-\]
+  
+![&#10;Y\_i = \\beta\_0 + \\beta\_1 x\_i +
+\\epsilon\_i&#10;](https://latex.codecogs.com/png.latex?%0AY_i%20%3D%20%5Cbeta_0%20%2B%20%5Cbeta_1%20x_i%20%2B%20%5Cepsilon_i%0A
+"
+Y_i = \\beta_0 + \\beta_1 x_i + \\epsilon_i
+")  
 
-where $\epsilon_i \sim N(0, \sigma^2)$.
+where ![\\epsilon\_i \\sim N(0,
+\\sigma^2)](https://latex.codecogs.com/png.latex?%5Cepsilon_i%20%5Csim%20N%280%2C%20%5Csigma%5E2%29
+"\\epsilon_i \\sim N(0, \\sigma^2)").
 
-
-```r
+``` r
 # simulate data
 sim_slr = function(x, beta_1, sigma, beta_0 = 0){
   n = length(x)
@@ -972,17 +1283,21 @@ sim_slr = function(x, beta_1, sigma, beta_0 = 0){
 }
 ```
 
-For each possible $\beta_1$ and $\sigma$ combination, simulate from the true model at least $1000$ times. Each time, perform the significance of the regression test.
+For each possible
+![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1 "\\beta_1")
+and ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+combination, simulate from the true model at least
+![1000](https://latex.codecogs.com/png.latex?1000 "1000") times. Each
+time, perform the significance of the regression test.
 
-The following sample code is the method to generate the predictor values, `x`: values for different sample sizes.
+The following sample code is the method to generate the predictor
+values, `x`: values for different sample sizes.
 
-
-```r
+``` r
 x_values = seq(0, 5, length = n)
 ```
 
-
-```r
+``` r
 # estimate power by different sample sizes
 Estimate_power = function(size = 10){
   
@@ -1014,14 +1329,18 @@ Estimate_power = function(size = 10){
 }
 ```
 
-In the functions below, before plotting the result, we will calculate the estimate of Power by this formula,
+In the functions below, before plotting the result, we will calculate
+the estimate of Power by this formula,
 
-\[
-\hat{\text{Power}} = \hat{P}[\text{Reject } H_0 \mid H_1 \text{ True}] = \frac{\text{# Tests Rejected}}{\text{# Simulations}}
-\]
+  
+![&#10;\\hat{\\text{Power}} = \\hat{P}\[\\text{Reject } H\_0 \\mid H\_1
+\\text{ True}\] = \\frac{\\text{\# Tests Rejected}}{\\text{\#
+Simulations}}&#10;](https://latex.codecogs.com/png.latex?%0A%5Chat%7B%5Ctext%7BPower%7D%7D%20%3D%20%5Chat%7BP%7D%5B%5Ctext%7BReject%20%7D%20H_0%20%5Cmid%20H_1%20%5Ctext%7B%20True%7D%5D%20%3D%20%5Cfrac%7B%5Ctext%7B%23%20Tests%20Rejected%7D%7D%7B%5Ctext%7B%23%20Simulations%7D%7D%0A
+"
+\\hat{\\text{Power}} = \\hat{P}[\\text{Reject } H_0 \\mid H_1 \\text{ True}] = \\frac{\\text{# Tests Rejected}}{\\text{# Simulations}}
+")  
 
-
-```r
+``` r
 # initialize variables
 initialize_var = function(cycle){
   sim_cycle <<- cycle
@@ -1202,15 +1521,14 @@ effect_sample_plot = function(Power_n){
 
 ### Results
 
-```r
+``` r
 initialize_var(sim_cycle) #set no. of simulation cycle 1000
 Estimate_power(n[1]) # n = 10
 Estimate_power(n[2]) # n = 20
 Estimate_power(n[3]) # n = 30
 ```
 
-
-```r
+``` r
 plot_power(power_n, TRUE, TRUE, TRUE)
 ```
 
@@ -1218,62 +1536,78 @@ plot_power(power_n, TRUE, TRUE, TRUE)
 
 ### Discussion
 
-- How do $n$, $\beta_1$, and $\sigma$ affect power? Consider additional plots to demonstrate these effects.
+  - How do ![n](https://latex.codecogs.com/png.latex?n "n"),
+    ![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1
+    "\\beta_1"), and
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    affect power? Consider additional plots to demonstrate these
+    effects.
 
 ##### Effect of Sigma
+
   - When sigma becomes smaller, the average strength of Power is higher.
 
-```r
+<!-- end list -->
+
+``` r
 effect_sigma_avg(power_n) #Average power
 ```
 
+| Sample.size | Sigma.4 | Sigma.2 | Sigma.1 |
+| ----------: | ------: | ------: | ------: |
+|          10 |  0.2523 |  0.5676 |  0.7843 |
+|          20 |  0.4157 |  0.7043 |  0.8523 |
+|          30 |  0.5199 |  0.7599 |  0.8790 |
 
+  - When sigma becomes smaller, the portion of Power \> 0.95 becomes
+    higher. When sigma = 1 and n = 30, there are 78% of the simulations
+    would be very likely to reject
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0").
+  - When sigma is large and beta\_1 becomes closer to zero, the power
+    starts to decrease earlier than that with smaller sigma. We can
+    observe the trend from the above plots.
+  - When sigma becomes larger, the maximom rejection number becomes
+    lower, and the power starts to deterioate earlier when beta\_1 is
+    closer to zero.
 
-| Sample.size| Sigma.4| Sigma.2| Sigma.1|
-|-----------:|-------:|-------:|-------:|
-|          10|  0.2523|  0.5676|  0.7843|
-|          20|  0.4157|  0.7043|  0.8523|
-|          30|  0.5199|  0.7599|  0.8790|
-  
-- When sigma becomes smaller, the portion of Power > 0.95 becomes higher. When sigma = 1 and n = 30, there are 78% of the simulations would be very likely to reject $H_0$.
-- When sigma is large and beta_1 becomes closer to zero, the power starts to decrease earlier than that with smaller sigma. We can observe the trend from the above plots.
-- When sigma becomes larger, the maximom rejection number becomes lower, and the power starts to deterioate earlier when beta_1 is closer to zero.
-  
+<!-- end list -->
 
-```r
+``` r
 # Portion of Power > 0.95
 effect_sigma_95(power_n)
 ```
 
+| Sample.size | Sigma.4 | Sigma.2 | Sigma.1 |
+| ----------: | ------: | ------: | ------: |
+|          10 |  0.0000 |  0.1707 |  0.6098 |
+|          20 |  0.0000 |  0.4634 |  0.7317 |
+|          30 |  0.0976 |  0.5366 |  0.7805 |
 
-
-| Sample.size| Sigma.4| Sigma.2| Sigma.1|
-|-----------:|-------:|-------:|-------:|
-|          10|  0.0000|  0.1707|  0.6098|
-|          20|  0.0000|  0.4634|  0.7317|
-|          30|  0.0976|  0.5366|  0.7805|
-
-
-```r
+``` r
 # Plot the effect of sigma vs Power
 effec_sigma_plot(power_n)
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-38-1.png)<!-- -->
 
-The histograms below are combination of sigma and sample size. They show similar findings as discussed above.
+The histograms below are combination of sigma and sample size. They show
+similar findings as discussed above.
 
-```r
+``` r
 # Plot distribution of Power of each sigma and n
 effect_sigma_hist(power_n)
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-39-1.png)<!-- -->
 
-- When sigma is small and n is large, the Power is particularly strong when $|\beta_1|$ is between 0.5 and 2.
+  - When sigma is small and n is large, the Power is particularly strong
+    when
+    ![|\\beta\_1|](https://latex.codecogs.com/png.latex?%7C%5Cbeta_1%7C
+    "|\\beta_1|") is between 0.5 and 2.
 
+<!-- end list -->
 
-```r
+``` r
 # Re-plot for easy reference
 par(mfrow=c(1,1))
 plot_power(power_n, plot1 = TRUE) #Sigma = 1
@@ -1281,47 +1615,52 @@ plot_power(power_n, plot1 = TRUE) #Sigma = 1
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-40-1.png)<!-- -->
 
-
 #### Effect of sample size n
 
-```r
+``` r
 effect_sample_plot(power_n) # Plot the effect of Sample size n
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-41-1.png)<!-- -->
 
-- When n becames larger, the average stength of power is higher. The improvement is more obvious when for sigma equals to 2 or 4.
+  - When n becames larger, the average stength of power is higher. The
+    improvement is more obvious when for sigma equals to 2 or 4.
 
-```r
+<!-- end list -->
+
+``` r
 effect_sigma_avg(power_n) # Print average power per sample size, sigma
 ```
 
+| Sample.size | Sigma.4 | Sigma.2 | Sigma.1 |
+| ----------: | ------: | ------: | ------: |
+|          10 |  0.2523 |  0.5676 |  0.7843 |
+|          20 |  0.4157 |  0.7043 |  0.8523 |
+|          30 |  0.5199 |  0.7599 |  0.8790 |
 
+  - When n becomes smaller with a larger sigma, say sigma = 4, it is
+    very unlikely to reject
+    ![H\_0](https://latex.codecogs.com/png.latex?H_0 "H_0").
+  - However, when n = 30, with larger sigma, say sigma = 4, it is
+    possible to reject ![H\_0](https://latex.codecogs.com/png.latex?H_0
+    "H_0"), but chance is very low.
+  - When n becomes larger, with smaller sigma, both average power and
+    chance to reject ![H\_0](https://latex.codecogs.com/png.latex?H_0
+    "H_0") increase significantly.
 
-| Sample.size| Sigma.4| Sigma.2| Sigma.1|
-|-----------:|-------:|-------:|-------:|
-|          10|  0.2523|  0.5676|  0.7843|
-|          20|  0.4157|  0.7043|  0.8523|
-|          30|  0.5199|  0.7599|  0.8790|
-    
-- When n becomes smaller with a larger sigma, say sigma = 4, it is very unlikely to reject $H_0$.
-- However, when n = 30, with larger sigma, say sigma = 4, it is possible to reject $H_0$, but chance is very low.
-- When n becomes larger, with smaller sigma, both average power and chance to reject $H_0$ increase significantly.
+<!-- end list -->
 
-```r
+``` r
 effect_sigma_95(power_n) # Print portion of power > 95% per sample size, sigma
 ```
 
+| Sample.size | Sigma.4 | Sigma.2 | Sigma.1 |
+| ----------: | ------: | ------: | ------: |
+|          10 |  0.0000 |  0.1707 |  0.6098 |
+|          20 |  0.0000 |  0.4634 |  0.7317 |
+|          30 |  0.0976 |  0.5366 |  0.7805 |
 
-
-| Sample.size| Sigma.4| Sigma.2| Sigma.1|
-|-----------:|-------:|-------:|-------:|
-|          10|  0.0000|  0.1707|  0.6098|
-|          20|  0.0000|  0.4634|  0.7317|
-|          30|  0.0976|  0.5366|  0.7805|
-
-
-```r
+``` r
 par(mfrow=c(3,1))
 
 # Visualize the effect of sample size vs power decrease 
@@ -1332,79 +1671,110 @@ plot_power(power_n, plot3 = TRUE)
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-44-1.png)<!-- -->
 
-- There is a relationship between the sample size and the moment power starts to decrease.
-- The smaller the value of n, the earlier the power starts to decrease.
-- When n is larger, say $n = 30$, $\sigma = 2$, power will hold at 1 from $-2 < \beta_1 < -1.3$ before it starts to decrease.
-- When n is smaller, say $n = 20$, power starts to decrease when $\beta_1 = -1.1$. When $n = 10$, it starts even earlier.
-- We can see the trend from both the above 3 plots, and the table below.
+  - There is a relationship between the sample size and the moment power
+    starts to decrease.
+  - The smaller the value of n, the earlier the power starts to
+    decrease.
+  - When n is larger, say ![n
+    = 30](https://latex.codecogs.com/png.latex?n%20%3D%2030 "n = 30"),
+    ![\\sigma
+    = 2](https://latex.codecogs.com/png.latex?%5Csigma%20%3D%202
+    "\\sigma = 2"), power will hold at 1 from ![-2 \< \\beta\_1 \<
+    -1.3](https://latex.codecogs.com/png.latex?-2%20%3C%20%5Cbeta_1%20%3C%20-1.3
+    "-2 \< \\beta_1 \< -1.3") before it starts to decrease.
+  - When n is smaller, say ![n
+    = 20](https://latex.codecogs.com/png.latex?n%20%3D%2020 "n = 20"),
+    power starts to decrease when ![\\beta\_1 =
+    -1.1](https://latex.codecogs.com/png.latex?%5Cbeta_1%20%3D%20-1.1
+    "\\beta_1 = -1.1"). When ![n
+    = 10](https://latex.codecogs.com/png.latex?n%20%3D%2010 "n = 10"),
+    it starts even earlier.
+  - We can see the trend from both the above 3 plots, and the table
+    below.
 
+<!-- end list -->
 
-```r
+``` r
 effect_sample(power_n, 1, 15) #print the first 15 rows where power starts to decrease in each n
 ```
 
+| beta\_1 | n = 10 | n = 20 | n = 30 |
+| ------: | -----: | -----: | -----: |
+|   \-2.0 |  0.995 |  1.000 |  1.000 |
+|   \-1.9 |  0.987 |  1.000 |  1.000 |
+|   \-1.8 |  0.977 |  1.000 |  1.000 |
+|   \-1.7 |  0.942 |  1.000 |  1.000 |
+|   \-1.6 |  0.933 |  0.999 |  1.000 |
+|   \-1.5 |  0.917 |  0.997 |  1.000 |
+|   \-1.4 |  0.882 |  0.996 |  1.000 |
+|   \-1.3 |  0.829 |  0.990 |  1.000 |
+|   \-1.2 |  0.743 |  0.973 |  0.997 |
+|   \-1.1 |  0.684 |  0.942 |  0.994 |
+|   \-1.0 |  0.600 |  0.889 |  0.973 |
+|   \-0.9 |  0.528 |  0.831 |  0.943 |
+|   \-0.8 |  0.416 |  0.724 |  0.884 |
+|   \-0.7 |  0.348 |  0.609 |  0.801 |
+|   \-0.6 |  0.276 |  0.479 |  0.644 |
 
+  - When ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma
+    "\\sigma") is smaller, the power increases quickly when
+    ![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1
+    "\\beta_1") becomes larger.
 
-| beta_1| n = 10| n = 20| n = 30|
-|------:|------:|------:|------:|
-|   -2.0|  0.995|  1.000|  1.000|
-|   -1.9|  0.987|  1.000|  1.000|
-|   -1.8|  0.977|  1.000|  1.000|
-|   -1.7|  0.942|  1.000|  1.000|
-|   -1.6|  0.933|  0.999|  1.000|
-|   -1.5|  0.917|  0.997|  1.000|
-|   -1.4|  0.882|  0.996|  1.000|
-|   -1.3|  0.829|  0.990|  1.000|
-|   -1.2|  0.743|  0.973|  0.997|
-|   -1.1|  0.684|  0.942|  0.994|
-|   -1.0|  0.600|  0.889|  0.973|
-|   -0.9|  0.528|  0.831|  0.943|
-|   -0.8|  0.416|  0.724|  0.884|
-|   -0.7|  0.348|  0.609|  0.801|
-|   -0.6|  0.276|  0.479|  0.644|
+#### Effect of ![\\beta\_1](https://latex.codecogs.com/png.latex?%5Cbeta_1 "\\beta_1")
 
-- When $\sigma$ is smaller, the power increases quickly when $\beta_1$ becomes larger.
+  - When the absolute value of Beta\_1 comes close to zero, the Power
+    decrases, and could be critically close to zero for all n. The trend
+    can be seen in the above 3 plots.
+  - The relationship forms a symmetric, inverted-bell shape. The actual
+    numbers associated with ![\\sigma
+    = 2](https://latex.codecogs.com/png.latex?%5Csigma%20%3D%202
+    "\\sigma = 2"), are in the below table
 
-#### Effect of $\beta_1$
+<!-- end list -->
 
-- When the absolute value of Beta_1 comes close to zero, the Power decrases, and could be critically close to zero for all n. The trend can be seen in the above 3 plots.
-- The relationship forms a symmetric, inverted-bell shape. The actual numbers associated with $\sigma = 2$, are in the below table
-
-
-```r
+``` r
 effect_sample(power_n, 14, 29) #print row 14 to 29, where Beta_1 is close to zero
 ```
 
+| beta\_1 | n = 10 | n = 20 | n = 30 |
+| ------: | -----: | -----: | -----: |
+|   \-0.7 |  0.348 |  0.609 |  0.801 |
+|   \-0.6 |  0.276 |  0.479 |  0.644 |
+|   \-0.5 |  0.210 |  0.372 |  0.507 |
+|   \-0.4 |  0.140 |  0.241 |  0.370 |
+|   \-0.3 |  0.101 |  0.155 |  0.224 |
+|   \-0.2 |  0.083 |  0.101 |  0.135 |
+|   \-0.1 |  0.057 |  0.065 |  0.087 |
+|     0.0 |  0.050 |  0.050 |  0.048 |
+|     0.1 |  0.052 |  0.074 |  0.058 |
+|     0.2 |  0.070 |  0.099 |  0.147 |
+|     0.3 |  0.129 |  0.182 |  0.215 |
+|     0.4 |  0.146 |  0.250 |  0.365 |
+|     0.5 |  0.183 |  0.374 |  0.487 |
+|     0.6 |  0.269 |  0.499 |  0.674 |
+|     0.7 |  0.354 |  0.612 |  0.801 |
+|     0.8 |  0.401 |  0.753 |  0.880 |
 
+  - The absoule value of the signal strength,
+    ![|\\beta\_1|](https://latex.codecogs.com/png.latex?%7C%5Cbeta_1%7C
+    "|\\beta_1|"), is very likely to have a positive relatinoship with
+    the strength of power.
 
-| beta_1| n = 10| n = 20| n = 30|
-|------:|------:|------:|------:|
-|   -0.7|  0.348|  0.609|  0.801|
-|   -0.6|  0.276|  0.479|  0.644|
-|   -0.5|  0.210|  0.372|  0.507|
-|   -0.4|  0.140|  0.241|  0.370|
-|   -0.3|  0.101|  0.155|  0.224|
-|   -0.2|  0.083|  0.101|  0.135|
-|   -0.1|  0.057|  0.065|  0.087|
-|    0.0|  0.050|  0.050|  0.048|
-|    0.1|  0.052|  0.074|  0.058|
-|    0.2|  0.070|  0.099|  0.147|
-|    0.3|  0.129|  0.182|  0.215|
-|    0.4|  0.146|  0.250|  0.365|
-|    0.5|  0.183|  0.374|  0.487|
-|    0.6|  0.269|  0.499|  0.674|
-|    0.7|  0.354|  0.612|  0.801|
-|    0.8|  0.401|  0.753|  0.880|
+<!-- end list -->
 
-- The absoule value of the signal strength, $|\beta_1|$, is very likely to have a positive relatinoship with the strength of power.
-
-```r
+``` r
 effect_beta(power_n) #plot effect of Beta_1 vs power, for each sigma  
 ```
 
 ![](linear_regre_simstudy_files/figure-gfm/unnamed-chunk-47-1.png)<!-- -->
 
-##### Are $1000$ simulations sufficient?
-  - $1000$ simulations is sufficient to visulaize the trend between the 3 items and the strength of power with current parameter values. However, more simulations would further smooth out the curve. 
-  - More simulations will be necessary when $\sigma$ value is sufficiently larger than current setting.
-  
+##### Are ![1000](https://latex.codecogs.com/png.latex?1000 "1000") simulations sufficient?
+
+  - ![1000](https://latex.codecogs.com/png.latex?1000 "1000")
+    simulations is sufficient to visulaize the trend between the 3 items
+    and the strength of power with current parameter values. However,
+    more simulations would further smooth out the curve.
+  - More simulations will be necessary when
+    ![\\sigma](https://latex.codecogs.com/png.latex?%5Csigma "\\sigma")
+    value is sufficiently larger than current setting.
