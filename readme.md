@@ -8,6 +8,8 @@ output:
     theme: readable
     toc: yes  
   pdf_document: default
+  github_document:
+    pandoc_args: --webtex
 urlcolor: cyan
 ---
 
@@ -318,7 +320,7 @@ par(mfrow = c(2, 3))
 fstat_hist(df1, df2, TRUE, TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
 
 
 ```r
@@ -326,7 +328,7 @@ par(mfrow = c(2, 3))
 R2_hist(df1, df2, TRUE, TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
 
 
 ```r
@@ -334,7 +336,7 @@ par(mfrow = c(2, 3))
 pvalue_hist(df1, df2, TRUE, TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
 
 ### Discussion
 
@@ -360,7 +362,7 @@ fstat_hist(df1, df2, sig = TRUE, curve = TRUE)
 R2_hist(df1, df2, sig = TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-10-1.png)<!-- -->
 
 ```r
 # Significant Model
@@ -391,7 +393,7 @@ par(mfrow = c(1, 3))
 pvalue_hist(df1, df2, TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-11-1.png)<!-- -->
 
   - In the second plot with $\sigma$ = 5. More p-value is falling into larger values, which contribute to null hypothesis. The frequency of the value close to zero is lower comparing to the 1st plot. 
   - We should be reminded that null hypothesis contains low p-value as well.
@@ -407,7 +409,7 @@ fstat_hist(df1, df2, nsig = TRUE, curve = TRUE)
 R2_hist(df1, df2, nsig = TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-12-1.png)<!-- -->
 
 ```r
 # Non - Significant Model
@@ -442,7 +444,7 @@ par(mfrow = c(1, 3))
 pvalue_hist(df1, df2, nsig = TRUE)
 ```
 
-![](wlchan2-sim-proj_test_short_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](linear_regre_simstudy_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
 
 - It means that 5% of the p-value will be above the 9th percentile, another 5% will be between 90th and 95th percentile, and so forth. 5% of the value will be from 0 to 0.05, and another will be from 0.05 to 0.1.
 - The uniformly distributed p-value is one of the definition of a p-value under null hypothesis.
