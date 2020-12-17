@@ -1,17 +1,3 @@
----
-title: 'Linear Regression Simulation Project'
-author: "Nov-27-2020, Oran Chan"
-date: ''
-output:
-  github_document:
-    pandoc_args: --webtex
-  # html_document:
-  #   keep_md: true 
-  #   theme: readable
-  #   toc: yes  
-  pdf_document: default
-urlcolor: cyan
----
 
 ***
 
